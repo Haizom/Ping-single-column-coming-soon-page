@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    height: 100vh;
+}
+
+.container{
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.title{
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+    margin-top: 2rem;
+}
+
+.title span{
+    font-weight: 700;
+    color: black;
+}
+
+.sub-title{
+    font-size:1rem;
+    font-weight: 300;
+    color: black;
+    margin: 1rem;
+}
+
+.notify{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.email-error, .not-error{
+    width: 65%;
+}
+#email{
+    width: 100%;
+    padding: 0.8rem;
+    border: 0.5px solid hsl(0, 0%, 84%);
+    border-radius: 35px;
+}
+
+#email::placeholder {
+	color: hsl(0, 0%, 59%);
+}
+
+.not-error p{
+    display: none;
+}
+
+.email-error p{
+    color: red;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 111%;
+    left: 4%;
+}
+
+.email-error #email{
+    border: 1px solid red;
+}
+
+
+button{
+    width: 30%;
+    border-radius: 35px;
+    border: none;
+    color: #fff;
+    background-color: hsl(223, 87%, 63%);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(129, 162, 243);
+}
+
+form + img{
+    width:100%;
+    margin: 2rem 0;
+}
+
+footer{
+    text-align: center;
+}
+
+footer p{
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+    font-size: 1rem;
+    padding: 2rem 0;
+}
+
+
+
+li {
+    color:hsl(223, 87%, 63%);
+    border: 1px solid hsl(0, 1%, 81%);
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1rem;
+    height: 2rem;
+    text-align: center;
+    width: 2rem;
+    margin: .5rem;
+    position: relative;
+}
+
+li::before{
+    position: absolute;
+    top: 28%;
+    left: 28%;
+}
+
+li:hover{
+    background-color: hsl(223, 87%, 63%);
+    cursor: pointer;
+}
+
+li:hover::before{
+    color: #fff;
+}
+
+@media  (max-width: 600px) {
+    .container{
+        max-width: 400px;
+    }
+
+    .notify{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 1.5rem;
+    }
+
+    .notify div
+    {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    button{
+        width: 100%;
+        border-radius: 35px;
+        border: none;
+        color: #fff;
+        background-color: hsl(223, 87%, 63%);
+        padding: 0.8rem;
+    
+    }
+
+    .email-error p{
+        top: 45%;
+        left: 30%;
+    }
+
+    .email-error #email{
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+
+
